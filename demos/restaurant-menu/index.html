@@ -58,7 +58,7 @@ footer{text-align:center;padding:20px;font-size:.78rem;color:#a08d80}
 let total=0,count=0;
 document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{
 count++;total+=+b.dataset.price;
-document.getElementById('cartSummary').textContent=count+' מנות · ₪'+total;
+document.getElementById('cartSummary').textContent=(count===1?'מנה אחת':count+' מנות')+' · ₪'+total;
 }));
 </script>
 </body>
