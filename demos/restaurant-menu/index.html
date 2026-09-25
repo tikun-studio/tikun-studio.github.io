@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>תפריט דיגיטלי והזמנות - הדגמה | Tikun Studio</title>
+<meta name="description" content="הדגמה חיה: תפריט דיגיטלי והזמנות ישירות למסעדות - בלי עמלות שלטן ביס ווולט.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#fdf8f3;color:#2d2420;line-height:1.7}
+.hero{background:linear-gradient(135deg,#5b2c20,#8a4530);color:#fff;padding:48px 20px 36px;text-align:center}
+.hero .demo-tag{display:inline-block;background:#f0b429;color:#5b2c20;font-size:.75rem;font-weight:800;border-radius:12px;padding:3px 12px;margin-bottom:12px}
+.hero h1{font-size:1.7rem;margin-bottom:6px}
+.hero p{color:#f0ddd2;max-width:500px;margin:0 auto}
+.wrap{max-width:640px;margin:0 auto;padding:30px 16px}
+.cat{font-size:1.2rem;margin:22px 0 10px;color:#5b2c20;border-bottom:2px solid #f0b429;padding-bottom:4px}
+.item{display:flex;justify-content:space-between;align-items:flex-start;background:#fff;border-radius:10px;padding:12px 14px;margin-bottom:8px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.item .info h3{font-size:.98rem}
+.item .info p{font-size:.82rem;color:#7a6a60}
+.item .price{font-weight:800;color:#8a4530;white-space:nowrap;margin-right:10px}
+.add{display:inline-block;background:#f0b429;color:#5b2c20;border:none;border-radius:14px;font-size:.75rem;font-weight:800;padding:3px 10px;margin-top:4px;cursor:pointer}
+.cart-bar{position:sticky;bottom:12px;background:#5b2c20;color:#fff;border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;margin-top:18px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.cart-bar a{background:#25d366;color:#fff;text-decoration:none;font-weight:800;border-radius:10px;padding:9px 16px}
+.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:26px}
+.benefit{background:#fff;border-radius:10px;padding:14px;text-align:center;font-size:.85rem;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.benefit b{display:block;color:#5b2c20;margin-bottom:4px}
+footer{text-align:center;padding:20px;font-size:.78rem;color:#a08d80}
+</style>
+</head>
+<body>
+<div class="hero">
+<span class="demo-tag">הדגמה - מסעדה לדוגמה</span>
+<h1>התפריט שלנו, ישירות אליכם</h1>
+<p>הזמינו ישירות מהמסעדה - בלי אפליקציות תיווך, בלי עמלות. ההזמנה מגיעה אלינו בוואטסאפ.</p>
+</div>
+<div class="wrap">
+<div class="cat">🥗 מנות ראשונות</div>
+<div class="item"><div class="info"><h3>סלט ירקות קלויים</h3><p>עם גבינת עזים וצנוברים קלויים</p><button class="add" data-price="42">+ הוסף</button></div><span class="price">₪42</span></div>
+<div class="item"><div class="info"><h3>חומוס ביתי</h3><p>עם פיתה חמה וטחינה</p><button class="add" data-price="32">+ הוסף</button></div><span class="price">₪32</span></div>
+<div class="cat">🍖 עיקריות</div>
+<div class="item"><div class="info"><h3>אנטריקוט על האש</h3><p>300 גרם, עם תפוחי אדמה צלויים</p><button class="add" data-price="128">+ הוסף</button></div><span class="price">₪128</span></div>
+<div class="item"><div class="info"><h3>פסטה פטריות</h3><p>שמנת, פרמז׳ן וטריוטר</p><button class="add" data-price="68">+ הוסף</button></div><span class="price">₪68</span></div>
+<div class="item"><div class="info"><h3>המבורגר הבית</h3><p>250 גרם, צ׳יפס ורוטב שום</p><button class="add" data-price="72">+ הוסף</button></div><span class="price">₪72</span></div>
+<div class="cat">🍰 קינוחים</div>
+<div class="item"><div class="info"><h3>קרם ברולה</h3><p>וניל אמיתי</p><button class="add" data-price="34">+ הוסף</button></div><span class="price">₪34</span></div>
+<div class="cart-bar">
+<span id="cartSummary">הסל ריק</span>
+<a id="waOrder" href="#" onclick="return false;">שליחת הזמנה בוואטסאפ</a>
+</div>
+<div class="benefits">
+<div class="benefit"><b>0% עמלה</b>במקום 25-30% לשלטן ביס ווולט</div>
+<div class="benefit"><b>הלקוחות שלך</b>הם מזמינים אצלך ישירות, לא באפליקציה</div>
+<div class="benefit"><b>QR על השולחן</b>סריקה ותפריט נפתח, בלי הדפסות</div>
+</div>
+</div>
+<footer>דף הדגמה גנרי - Tikun Studio · המנות והמחירים להמחשה בלבד · בגרסה אמיתית: התפריט, המחירים והוואטסאפ שלך</footer>
+<script>
+let total=0,count=0;
+document.querySelectorAll('.add').forEach(b=>b.addEventListener('click',()=>{
+count++;total+=+b.dataset.price;
+document.getElementById('cartSummary').textContent=count+' מנות · ₪'+total;
+}));
+</script>
+</body>
+</html>
