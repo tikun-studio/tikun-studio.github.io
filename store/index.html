@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>החנות | תיקון סטודיו</title>
+<style>
+  :root{--navy:#1B2A4A;--cream:#FAF6EF;--orange:#E8622C;--teal:#0E7C7B;}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif;}
+  body{background:var(--cream);color:var(--navy);}
+  header{background:var(--navy);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;}
+  header h1{font-size:1.3rem;}
+  header a{color:#fff;text-decoration:none;font-size:.9rem;opacity:.85;}
+  .hero{text-align:center;padding:44px 20px 10px;}
+  .hero h2{font-size:1.9rem;margin-bottom:8px;}
+  .hero p{color:#555;max-width:520px;margin:0 auto;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:36px auto;padding:0 20px;}
+  .card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(27,42,74,.08);display:flex;flex-direction:column;}
+  .card img{width:100%;height:300px;object-fit:cover;}
+  .card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .tag{display:inline-block;background:var(--teal);color:#fff;font-size:.75rem;padding:3px 10px;border-radius:20px;width:fit-content;}
+  .tag.soon{background:#999;}
+  .tag.launch{background:var(--orange);}
+  .card h3{font-size:1.25rem;}
+  .card p{color:#555;font-size:.95rem;line-height:1.5;}
+  .price{font-size:1.4rem;font-weight:700;color:var(--navy);}
+  .price small{font-size:.8rem;color:#888;font-weight:400;}
+  .cta{margin-top:auto;background:var(--orange);color:#fff;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:700;}
+  .cta.disabled{background:#bbb;pointer-events:none;}
+  .howto{max-width:720px;margin:20px auto 60px;padding:24px;background:#fff;border-radius:14px;box-shadow:0 4px 18px rgba(27,42,74,.08);}
+  .howto h3{margin-bottom:12px;}
+  .howto ol{padding-right:20px;line-height:2;color:#444;}
+  footer{text-align:center;padding:24px;color:#888;font-size:.85rem;}
+</style>
+</head>
+<body>
+<header>
+  <h1>תיקון סטודיו</h1>
+  <a href="https://tikun-studio.github.io/">לדף הבית</a>
+</header>
+<section class="hero">
+  <h2>החנות של הסטודיו</h2>
+  <p>מוצרים דיגיטליים ואמנות מקורית לעסקים ולבית. תשלום בביט או בהעברה בנקאית, מסירה מהירה.</p>
+</section>
+<div class="grid">
+  <div class="card">
+    <img src="poster-web.jpg" alt="פוסטר תל אביב רטרו">
+    <div class="body">
+      <span class="tag soon">בקרוב</span>
+      <h3>פוסטר "תל אביב בערב" - רטרו</h3>
+      <p>הדפס אמנותי מקורי בסגנון כרזות נוסטלגיה, נייר עבה איכותי, גודל A3. מתאים לסלון, משרד או מתנה.</p>
+      <div class="price">₪69 <small>כולל משלוח</small></div>
+      <a class="cta disabled" href="#">זמין בקרוב</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="vinyl-web.jpg" alt="תקליט קיר שמש מדבר">
+    <div class="body">
+      <span class="tag soon">בקרוב</span>
+      <h3>תקליט קיר "שמש המדבר"</h3>
+      <p>תקליט דקורטיבי לתלייה עם אמנות מקורית בסגנון אלבומי שנות ה-70. פריט שיחה לכל קיר. 30 ס"מ.</p>
+      <div class="price">₪89 <small>כולל משלוח</small></div>
+      <a class="cta disabled" href="#">זמין בקרוב</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="pack-preview.png" alt="חבילת תבניות אינסטגרם" onerror="this.style.display='none'">
+    <div class="body">
+      <span class="tag launch">בהשקה אחרי החג</span>
+      <h3>חבילת 15 תבניות אינסטגרם לעסקים</h3>
+      <p>תבניות Canva מעוצבות בעברית לעסקים שירותיים: טיפים, ציטוטים, מבצעים, ביקורות וקריאות לפעולה. עריכות בקליק, מותאמות לפורמט 4:5. מחיר השקה.</p>
+      <div class="price">₪79 <small>חד-פעמי, שלך לתמיד</small></div>
+      <a class="cta disabled" href="#">נפתחת אחרי החג</a>
+    </div>
+  </div>
+</div>
+<section class="howto">
+  <h3>איך משלמים?</h3>
+  <ol>
+    <li>בוחרים מוצר ושולחים הודעה במייל: <strong>o25ox7@mail.instinct.com</strong></li>
+    <li>מקבלים בקשת תשלום בביט או פרטי העברה בנקאית</li>
+    <li>מוצרים דיגיטליים נמסרים למייל תוך 24 שעות; פוסטרים בתיאום משלוח</li>
+  </ol>
+</section>
+<footer>תיקון סטודיו &copy; 2026 | כל העיצובים מקוריים</footer>
+</body>
+</html>
